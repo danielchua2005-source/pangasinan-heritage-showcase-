@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -34,7 +34,6 @@ export default function AboutPage() {
         <div className="about-cards">
           <article>
             <h3>Discover</h3>
-
             <p>
               Explore notable places and landmarks across
               Pangasinan and learn more about their importance
@@ -44,17 +43,15 @@ export default function AboutPage() {
 
           <article>
             <h3>Preserve</h3>
-
             <p>
               Presenting heritage digitally can help raise
               awareness and encourage appreciation of the
-              province's valuable heritage.
+              province&apos;s valuable heritage.
             </p>
           </article>
 
           <article>
             <h3>Appreciate</h3>
-
             <p>
               The showcase encourages visitors and learners
               to appreciate the natural, historical, and

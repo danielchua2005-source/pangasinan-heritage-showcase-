@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
 
           <Link href="/heritage" className="button">
-            Explore Heritage →
+            Explore Heritage â†’
           </Link>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function Home() {
               }}
             >
               Learn about the historical and cultural
-              landmarks that represent Pangasinan's heritage.
+              landmarks that represent Pangasinan&apos;s heritage.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
             href="/heritage"
             className="button dark-button"
           >
-            View Heritage Destinations →
+            View Heritage Destinations â†’
           </Link>
         </div>
       </section>

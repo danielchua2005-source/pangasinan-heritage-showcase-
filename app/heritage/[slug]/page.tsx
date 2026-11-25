@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const heritageSites = [
   {
@@ -98,6 +98,12 @@ const heritageSites = [
   },
 ];
 
+export function generateStaticParams() {
+  return heritageSites.map((site) => ({
+    slug: site.slug,
+  }));
+}
+
 export default function HeritageDetailPage({
   params,
 }: {
@@ -116,7 +122,7 @@ export default function HeritageDetailPage({
           href="/heritage"
           className="button dark-button"
         >
-          ← Back to Heritage
+          â† Back to Heritage
         </Link>
       </main>
     );
@@ -141,7 +147,7 @@ export default function HeritageDetailPage({
 
           <h1>{site.name}</h1>
 
-          <p>📍 {site.location}</p>
+          <p>ðŸ“ {site.location}</p>
         </div>
       </section>
 
@@ -179,10 +185,11 @@ export default function HeritageDetailPage({
             href="/heritage"
             className="button dark-button"
           >
-            ← Back to Heritage
+            â† Back to Heritage
           </Link>
         </div>
       </section>
     </main>
   );
 }
+

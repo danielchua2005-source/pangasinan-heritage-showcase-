@@ -1,5 +1,13 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  output: "export",
+  basePath: "/pangasinan-heritage-showcase-",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
+
 export default nextConfig;
