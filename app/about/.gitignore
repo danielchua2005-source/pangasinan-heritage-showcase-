@@ -4,4 +4,4 @@ out/
 .env
 .env.local
 .env.*.local
-.DS_Store
+.DS_Storegit add .
