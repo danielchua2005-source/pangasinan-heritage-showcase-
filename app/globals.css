@@ -1,0 +1,660 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f5ef;
+  color: #173f35;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e8e4da;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  color: #173f35;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigation-item {
+  color: #555;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.navigation-item:hover {
+  color: #b47a24;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 8%;
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 38, 31, 0.82),
+      rgba(10, 38, 31, 0.35)
+    ),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hundred_Islands_National_Park.jpg/1600px-Hundred_Islands_National_Park.jpg")
+      center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.hero-label {
+  color: #f0c36a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.hero p:not(.hero-label) {
+  max-width: 650px;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: white;
+  color: #173f35;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.25s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #f0c36a;
+}
+
+/* =========================
+   HERITAGE SECTION
+========================= */
+
+.heritage-section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 90px 6% 110px;
+}
+
+.section-heading {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: #b47a24;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  color: #173f35;
+  font-size: clamp(34px, 5vw, 55px);
+  line-height: 1.05;
+  margin-bottom: 15px;
+}
+
+.section-heading span {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERITAGE GRID
+========================= */
+
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   HERITAGE CARD
+========================= */
+
+.heritage-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.heritage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+.heritage-card-image {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  display: block;
+}
+
+.heritage-card-content {
+  padding: 25px;
+}
+
+.heritage-badge {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #edf3ef;
+  color: #173f35;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.heritage-card h3 {
+  margin: 15px 0 8px;
+  color: #173f35;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.heritage-location {
+  color: #b47a24;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.heritage-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.heritage-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #173f35;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.heritage-link:hover {
+  color: #b47a24;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.search-form button {
+  border: none;
+  border-radius: 7px;
+  padding: 10px 16px;
+  background: #173f35;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  color: white;
+
+  background:
+    linear-gradient(
+      rgba(10, 38, 31, 0.82),
+      rgba(10, 38, 31, 0.55)
+    ),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hundred_Islands_National_Park.jpg/1600px-Hundred_Islands_National_Park.jpg")
+      center / cover no-repeat;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.about-content h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.about-content p:not(.hero-label) {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 90px 6%;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.about-cards article {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.about-cards h3 {
+  color: #173f35;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.about-cards p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  background: #173f35;
+  color: white;
+  padding: 40px 6%;
+  text-align: center;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .heritage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 70px 7%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .heritage-section {
+    padding: 65px 6% 80px;
+  }
+
+  .heritage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heritage-card-image {
+    height: 220px;
+  }
+
+  .about-hero {
+    padding: 70px 7%;
+  }
+
+  .about-content h1 {
+    font-size: 46px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+} .search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  background: transparent;
+}
+
+.search-form button {
+  border: none;
+  border-radius: 7px;
+  padding: 11px 18px;
+  background: #173f35;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #b47a24;
+}
+
+@media (max-width: 500px) {
+  .search-form {
+    flex-wrap: wrap;
+  }
+
+  .search-form input {
+    width: 100%;
+  }
+
+  .search-form button {
+    width: 100%;
+  }
+}/* =========================
+   HOME PAGE
+========================= */
+
+.home-intro {
+  max-width: 1400px;
+  margin: auto;
+  padding: 110px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: #f7f5ef;
+}
+
+.home-intro-content {
+  max-width: 600px;
+}
+
+.section-label {
+  color: #b47a24;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.home-intro h2,
+.home-feature h2 {
+  color: #173f35;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.home-intro-content > p:not(.section-label) {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.home-intro-image {
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.home-intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-link {
+  color: #173f35;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.text-link:hover {
+  color: #b47a24;
+}
+
+.home-feature {
+  max-width: 1400px;
+  margin: auto;
+  padding: 100px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  background: white;
+}
+
+.home-feature-text {
+  max-width: 550px;
+  align-self: end;
+}
+
+.home-feature-text p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.dark-button {
+  background: #173f35;
+  color: white;
+}
+
+.dark-button:hover {
+  background: #b47a24;
+  color: white;
+}
+
+/* HOME MOBILE */
+
+@media (max-width: 800px) {
+  .home-intro,
+  .home-feature {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 75px 7%;
+  }
+
+  .home-intro-image {
+    height: 350px;
+  }
+
+  .home-feature-text {
+    align-self: auto;
+  }
+}/* =========================
+   HERITAGE DETAIL
+========================= */
+
+.heritage-detail {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: #f7f5ef;
+}
+
+.heritage-detail-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.heritage-detail-content {
+  max-width: 600px;
+}
+
+.heritage-detail-content h2 {
+  color: #173f35;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.05;
+  margin: 15px 0 25px;
+}
+
+.heritage-detail-description {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.heritage-detail-content h3 {
+  color: #173f35;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.heritage-detail-content ul {
+  padding-left: 22px;
+  margin-bottom: 25px;
+}
+
+.heritage-detail-content li {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .heritage-detail {
+    grid-template-columns: 1fr;
+    padding: 70px 7%;
+    gap: 40px;
+  }
+
+  .heritage-detail-image img {
+    height: 350px;
+  }
+}
